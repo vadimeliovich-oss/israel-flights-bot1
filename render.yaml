@@ -1,0 +1,16 @@
+services:
+  - type: worker
+    name: israel-flights-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        value: 8758062682:AAGf4Ny1gZvg_us0U9RxQ0ZG7k1Jpky17do
+      - key: ADMIN_CHAT_ID
+        value: "762315584"
+      - key: AMADEUS_API_KEY
+        sync: false
+      - key: AMADEUS_API_SECRET
+        sync: false
